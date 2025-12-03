@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grilli - Our Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="topSection">
+      <div class="logo"><img src="assets/logo.svg" alt="Grilli Logo"></div>
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="findTable">
+        <img src="assets/images/features-icon-2.png" alt="Find Table">
+        <p class="Upcoming">Upcoming!</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="menu-hero">
+    <div class="hero-content">
+      <h1 class="headline-1">Our Delicious Menu</h1>
+      <p class="body-text">Experience the authentic flavors carefully prepared for you.</p>
+    </div>
+  </section>
+
+  <div class="category-navbar-wrapper">
+    <nav class="category-navbar">
+      <a href="#appetizers" class="cat-link active">Appetizers</a>
+      <a href="#main-veg" class="cat-link">Main Course (Veg)</a>
+      <a href="#main-nonveg" class="cat-link">Main Course (Non-Veg)</a>
+      <a href="#rice" class="cat-link">Rice</a>
+      <a href="#breads" class="cat-link">Breads</a>
+      <a href="#drinks" class="cat-link">Drinks</a>
+      <a href="#deserts" class="cat-link">Deserts</a>
+    </nav>
+  </div>
+
+  <div class="menu-container">
+
+    <!-- Appetizers -->
+    <section id="appetizers" class="menu-category">
+      <h2 class="category-title">Appetizers</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/springroll.png" alt="Spring Rolls" loading="lazy">
+            <button class="add-btn" data-name="Spring Rolls" data-price="12.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Spring Rolls</h3>
+              <span class="price">$12.00</span>
+            </div>
+            <p class="card-text">Crispy spring rolls with dipping sauce.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/bruschetta.png" alt="Bruschetta" loading="lazy">
+            <button class="add-btn" data-name="Bruschetta" data-price="10.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Bruschetta</h3>
+              <span class="price">$10.00</span>
+            </div>
+            <p class="card-text">Fresh tomatoes and basil on toasted bread.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/mushroom.png" alt="Stuffed Mushrooms" loading="lazy">
+            <button class="add-btn" data-name="Stuffed Mushrooms" data-price="14.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Stuffed Mushrooms</h3>
+              <span class="price">$14.00</span>
+            </div>
+            <p class="card-text">Mushrooms stuffed with cheese and herbs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Course Veg -->
+    <section id="main-veg" class="menu-category">
+      <h2 class="category-title">Main Course (Veg)</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/panner.png" alt="Paneer Butter Masala" loading="lazy">
+            <button class="add-btn" data-name="Paneer Butter Masala" data-price="18.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Paneer Butter Masala</h3>
+              <span class="price">$18.00</span>
+            </div>
+            <p class="card-text">Rich creamy tomato gravy with cottage cheese.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/vegbriyani.png" alt="Veg Biryani" loading="lazy">
+            <button class="add-btn" data-name="Veg Biryani" data-price="16.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Veg Biryani</h3>
+              <span class="price">$16.00</span>
+            </div>
+            <p class="card-text">Aromatic rice with mixed vegetables.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/stuffedpeppers.png" alt="Stuffed Peppers" loading="lazy">
+            <button class="add-btn" data-name="Stuffed Peppers" data-price="15.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Stuffed Peppers</h3>
+              <span class="price">$15.00</span>
+            </div>
+            <p class="card-text">Bell peppers stuffed with quinoa and veggies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Course Non-Veg -->
+    <section id="main-nonveg" class="menu-category">
+      <h2 class="category-title">Main Course (Non-Veg)</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/grilledchicken.png" alt="Grilled Chicken" loading="lazy">
+            <button class="add-btn" data-name="Grilled Chicken" data-price="22.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Grilled Chicken</h3>
+              <span class="price">$22.00</span>
+            </div>
+            <p class="card-text">Tender chicken steak with grilled vegetables.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/menu-2.png" alt="Lamb Chops" loading="lazy">
+            <button class="add-btn" data-name="Lamb Chops" data-price="28.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Lamb Chops</h3>
+              <span class="price">$28.00</span>
+            </div>
+            <p class="card-text">Juicy lamb chops with rosemary sauce.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/menu-6.png" alt="Grilled Salmon" loading="lazy">
+            <button class="add-btn" data-name="Grilled Salmon" data-price="26.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Grilled Salmon</h3>
+              <span class="price">$26.00</span>
+            </div>
+            <p class="card-text">Fresh salmon fillet with asparagus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rice -->
+    <section id="rice" class="menu-category">
+      <h2 class="category-title">Rice</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/steamedrice.png" alt="Steamed Rice" loading="lazy">
+            <button class="add-btn" data-name="Steamed Rice" data-price="5.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Steamed Rice</h3>
+              <span class="price">$5.00</span>
+            </div>
+            <p class="card-text">Fluffy white basmati rice.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/jerrarice.png" alt="Jeera Rice" loading="lazy">
+            <button class="add-btn" data-name="Jeera Rice" data-price="6.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Jeera Rice</h3>
+              <span class="price">$6.00</span>
+            </div>
+            <p class="card-text">Basmati rice tempered with cumin seeds.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/menu-3.png" alt="Fried Rice" loading="lazy">
+            <button class="add-btn" data-name="Fried Rice" data-price="12.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Fried Rice</h3>
+              <span class="price">$12.00</span>
+            </div>
+            <p class="card-text">Wok-tossed rice with vegetables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breads -->
+    <section id="breads" class="menu-category">
+      <h2 class="category-title">Breads</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/butternaan.png" alt="Butter Naan" loading="lazy">
+            <button class="add-btn" data-name="Butter Naan" data-price="3.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Butter Naan</h3>
+              <span class="price">$3.00</span>
+            </div>
+            <p class="card-text">Soft leavened bread with butter.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/garlicnaan.png" alt="Garlic Naan" loading="lazy">
+            <button class="add-btn" data-name="Garlic Naan" data-price="4.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Garlic Naan</h3>
+              <span class="price">$4.00</span>
+            </div>
+            <p class="card-text">Naan topped with minced garlic.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/Roti.png" alt="Roti" loading="lazy">
+            <button class="add-btn" data-name="Roti" data-price="2.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Roti</h3>
+              <span class="price">$2.00</span>
+            </div>
+            <p class="card-text">Whole wheat flatbread.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drinks -->
+    <section id="drinks" class="menu-category">
+      <h2 class="category-title">Drinks</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/Mojito.png" alt="Mojito" loading="lazy">
+            <button class="add-btn" data-name="Mojito" data-price="8.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Mojito</h3>
+              <span class="price">$8.00</span>
+            </div>
+            <p class="card-text">Refreshing mint and lime cocktail.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/icedTea.png" alt="Iced Tea" loading="lazy">
+            <button class="add-btn" data-name="Iced Tea" data-price="5.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Iced Tea</h3>
+              <span class="price">$5.00</span>
+            </div>
+            <p class="card-text">Chilled tea with lemon.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/Lemonade.png" alt="Lemonade" loading="lazy">
+            <button class="add-btn" data-name="Lemonade" data-price="4.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Lemonade</h3>
+              <span class="price">$4.00</span>
+            </div>
+            <p class="card-text">Freshly squeezed lemon juice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deserts -->
+    <section id="deserts" class="menu-category">
+      <h2 class="category-title">Deserts</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/chocolate.png" alt="Chocolate Cake" loading="lazy">
+            <button class="add-btn" data-name="Chocolate Cake" data-price="9.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Chocolate Cake</h3>
+              <span class="price">$9.00</span>
+            </div>
+            <p class="card-text">Rich chocolate cake with ganache.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-banner">
+            <img src="assets/images/vaniallaice.png" alt="Ice Cream" loading="lazy">
+            <button class="add-btn" data-name="Ice Cream" data-price="6.00">+</button>
+          </div>
+          <div class="card-content">
+            <div class="title-wrapper">
+              <h3 class="title-3">Ice Cream</h3>
+              <span class="price">$6.00</span>
+            </div>
+            <p class="card-text">Vanilla bean ice cream.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<br><br>
+<hr>
+    <div class="footer">
+      <div class="footer-info">
+        <img src="assets/images/about-banner.jpg" alt="Location Banner">
+        <span>
+          📍 Location: 777 Riverview, OutofUrReach <br><br>
+          🏪 Working hours: <br>
+          Monday to Friday
+        </span>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Career</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+      <div class="footer-banner">
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi earum quibusdam consectetur quos, modi
+          nesciunt deserunt enim qui, blanditiis pariatur voluptatem assumenda harum tempora nisi odio, architecto et
+          corrupti.
+        </span>
+        <img src="assets/images/badge-2.png" alt="Badge">
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Bottom Bar -->
+  <div class="cart-bar" id="cartBar">
+    <div class="cart-info">
+      <span class="restaurant-name">Grilli</span>
+      <span class="cart-count" id="cartCount">0 items</span>
+    </div>
+    <div class="cart-actions">
+      <button class="clear-cart-btn" id="clearCartBtn">Clear Cart</button>
+      <a href="order.html" class="view-order-btn">View Order</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

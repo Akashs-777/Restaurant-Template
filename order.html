@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Haven - Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container" style="max-width: 800px; margin: 50px auto; font-family: 'DM Sans', sans-serif;">
+    <h1 style="font-family: 'Forum', cursive; color: var(--gold-crayola); text-align: center;">Your Order</h1>
+
+    <div id="orderContainer" style="background: #222; padding: 20px; border-radius: 10px; color: white;">
+      <ul id="orderList" style="list-style: none; padding: 0;">
+        <!-- Items will be injected here -->
+      </ul>
+
+      <div style="margin-top: 20px; border-top: 1px solid #444; padding-top: 10px; font-size: 1.1rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+          <span>Subtotal:</span>
+          <span id="subtotalPrice">$0.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+          <span>Delivery Fee:</span>
+          <span id="deliveryFee">$3.00</span>
+        </div>
+        <div
+          style="display: flex; justify-content: space-between; font-size: 1.3rem; margin-top: 10px; border-top: 1px dashed #444; padding-top: 10px;">
+          <span>Total:</span>
+          <span id="totalPrice" style="color: var(--gold-crayola); font-weight: bold;">$0.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivery & Payment Section -->
+    <div style="background: #222; padding: 20px; border-radius: 10px; color: white; margin-top: 20px;">
+      <h2 style="font-family: 'Forum', cursive; color: var(--gold-crayola); margin-bottom: 15px;">Delivery Details</h2>
+      <div style="margin-bottom: 20px;">
+        <label for="address" style="display: block; margin-bottom: 5px; font-family: 'DM Sans', sans-serif;">Delivery
+          Address:</label>
+        <textarea id="address" rows="3" placeholder="Enter your full address here..."
+          style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #444; background: #333; color: white; font-family: 'DM Sans', sans-serif;"></textarea>
+      </div>
+
+      <h2 style="font-family: 'Forum', cursive; color: var(--gold-crayola); margin-bottom: 15px;">Payment Mode</h2>
+      <div style="font-family: 'DM Sans', sans-serif;">
+        <label style="display: flex; align-items: center; margin-bottom: 10px; cursor: pointer;">
+          <input type="radio" name="payment" value="cod" checked
+            style="margin-right: 10px; accent-color: var(--gold-crayola);">
+          Cash on Delivery
+        </label>
+        <label style="display: flex; align-items: center; cursor: pointer;">
+          <input type="radio" name="payment" value="card"
+            style="margin-right: 10px; accent-color: var(--gold-crayola);">
+          Credit / Debit Card
+        </label>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="menu.html" style="color: white; text-decoration: underline; margin-right: 20px;">Back to Menu</a>
+      <button id="checkoutBtn"
+        style="background: var(--gold-crayola); border: none; padding: 10px 30px; font-size: 1rem; cursor: pointer; border-radius: 5px; font-weight: bold;">Checkout</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // Specific logic for order page to render items
+    const orderList = document.getElementById('orderList');
+    const subtotalPriceEl = document.getElementById('subtotalPrice');
+    const totalPriceEl = document.getElementById('totalPrice');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    const addressInput = document.getElementById('address');
+
+    function renderOrder() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || {};
+      const items = Object.keys(cart);
+      let subtotal = 0;
+      const deliveryFee = 3.00;
+
+      orderList.innerHTML = '';
+
+      if (items.length === 0) {
+        orderList.innerHTML = '<li style="text-align: center; color: #888;">Your cart is empty.</li>';
+        subtotalPriceEl.textContent = '$0.00';
+        totalPriceEl.textContent = '$0.00';
+        return;
+      }
+
+      items.forEach(name => {
+        const item = cart[name];
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        const li = document.createElement('li');
+        li.style.display = 'flex';
+        li.style.justifyContent = 'space-between';
+        li.style.alignItems = 'center';
+        li.style.marginBottom = '10px';
+        li.style.paddingBottom = '10px';
+        li.style.borderBottom = '1px dashed #444';
+
+        li.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <button class="remove-btn" onclick="removeItem('${name}')" style="background: transparent; border: 1px solid #ff4d4d; color: #ff4d4d; border-radius: 50%; width: 24px; height: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px;">&times;</button>
+            <span>${name} x ${item.quantity}</span>
+          </div>
+          <span>$${itemTotal.toFixed(2)}</span>
+        `;
+        orderList.appendChild(li);
+      });
+
+      const total = subtotal + deliveryFee;
+      subtotalPriceEl.textContent = '$' + subtotal.toFixed(2);
+      totalPriceEl.textContent = '$' + total.toFixed(2);
+    }
+
+    // Function to remove individual item
+    window.removeItem = function (name) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || {};
+      if (cart[name]) {
+        delete cart[name];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderOrder();
+        if (window.updateCartUI) window.updateCartUI();
+      }
+    };
+
+    checkoutBtn.addEventListener('click', () => {
+      const address = addressInput.value.trim();
+      if (!address) {
+        alert('Please enter your delivery address.');
+        return;
+      }
+
+      const paymentMode = document.querySelector('input[name="payment"]:checked').value;
+      const paymentText = paymentMode === 'cod' ? 'Cash on Delivery' : 'Card';
+
+      alert(`Thank you for your order!\n\nDelivery to: ${address}\nPayment: ${paymentText}\n\nYour food will arrive shortly!`);
+      localStorage.removeItem('cart');
+      renderOrder();
+      addressInput.value = ''; // Clear address
+      // Update cart UI in app.js context if needed
+      if (window.updateCartUI) window.updateCartUI();
+    });
+
+    renderOrder();
+  </script>
+</body>
+
+</html>
