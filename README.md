@@ -53,9 +53,9 @@ Includes dynamic features like an **auto-sliding hero section**, **interactive m
 
 ---
 ## 📸 Preview
-[TTS App Preview](assets/<img <img width="1399" height="799" alt="Screenshot 2025-12-02 235534" src="https://github.com/user-attachments/assets/36726ad4-1bb0-4cf5-97cc-0856f5bcbf8e" />)
-[TTS App Preview](assets/<img <img <img width="1896" height="862" alt="Screenshot 2025-12-02 235618" src="https://github.com/user-attachments/assets/690abf85-5d1f-4063-a6ce-98d1e11ffa22" />)
-[TTS App Preview](assets/<img <img <img width="1919" height="856" alt="Screenshot 2025-12-02 235638" src="https://github.com/user-attachments/assets/26f54e59-1873-4d10-a2f1-62259c79fcdc" />)
+[TTS App Preview](assets/ <img width="1399" height="799" alt="Screenshot 2025-12-02 235534" src="https://github.com/user-attachments/assets/36726ad4-1bb0-4cf5-97cc-0856f5bcbf8e" />)
+[TTS App Preview](assets/ <img width="1896" height="862" alt="Screenshot 2025-12-02 235618" src="https://github.com/user-attachments/assets/690abf85-5d1f-4063-a6ce-98d1e11ffa22" />)
+[TTS App Preview](assets/ <img width="1919" height="856" alt="Screenshot 2025-12-02 235638" src="https://github.com/user-attachments/assets/26f54e59-1873-4d10-a2f1-62259c79fcdc" />)
 
 ## 📁 Project Structure
 
